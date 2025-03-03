@@ -1,0 +1,29 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=5
+
+[addons]
+
+terrain_voxel/chunk_size=Vector3i(16, 16, 16)
+terrain_voxel/generate_frequency=0.05
+terrain_voxel/distance_of_rendering_in_editor=4
+
+[application]
+
+config/name="Voxel Terrain"
+config/features=PackedStringArray("4.3", "Forward Plus")
+config/icon="res://icon.svg"
+
+[autoload]
+
+BlockGlobal="*res://addons/terrain_voxel/Scripts/block_global.gd"
+
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/terrain_voxel/plugin.cfg")
